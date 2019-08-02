@@ -3,19 +3,22 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
 </head>
 
 <body>
     <header class="header">
         <a class="header__logo logo">
-            <img src="http://placehold.it/220x47" alt="Cat Energy">
+            <img src="img/logo-mobile.svg" alt="Cat Energy" width="191" height="38">
         </a>
+        <button class="header__toggle header__toggle--opened" type="button">
+            <span class="visually-hidden">Кнопка переключения меню</span>
+        </button>
         <nav class="header__nav main-nav">
-            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Кнопка переключения меню</span></button>
             <ul class="main-nav__list">
                 <li class="main-nav__item">
-                    <a class="main-nav__link">Главная</a>
+                    <a class="main-nav__link main-nav__link--active"><span class="main-nav__active">Главная</span></a>
                 </li>
                 <li class="main-nav__item">
                     <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -30,8 +33,10 @@
         <section class="top-content">
             <h1 class="top-content__title">Функциональное питание для котов</h1>
             <p class="top-content__slogan">Занялся собой? Займись котом!</p>
-            <img src="http://placehold.it/280x270" alt="Корм Cat Energy с курицей">
-            <a class="top-content__link" href="form.html">Подобрать программу</a>
+            <div class="container">
+                <img src="img/index-can-mobile@1x.png" alt="Корм Cat Energy с курицей" width="280" height="271">
+                <a class="top-content__link button" href="form.html">Подобрать программу</a>
+            </div>
         </section>
         <section class="categories">
             <div class="categories__block">
@@ -63,32 +68,41 @@
             </ul>
         </section>
         <section class="example">
-            <h2 class="example__title">Живой пример</h2>
-            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-            <div class="example__result">
-                <p>5 кг<span>снижение веса</span></p>
-                <p>60 дней<span>затрачено времени</span></p>
+            <div class="example__container">
+                <h2 class="example__title">Живой пример</h2>
+                <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+                <div class="example__result">
+                    <p class="example__value">5 кг<span class="example__name">снижение веса</span></p>
+                    <p class="example__value">60 дней<span class="example__name">затрачено времени</span></p>
+                </div>
+                <p class="example__cost">Затраты на питание: 15 000 руб.</p>
             </div>
-            <p>Затраты на питание: 15 000 руб.</p>
             <div class="example__slider">
-                <img src="http://placehold.it/311x232" alt="Было">
-                <img src="http://placehold.it/251x240" alt="Стало">
-                <div class="example__toggle">
-                    <button class="example__button example__button--before">Было</button>
-                    <div></div>
-                    <button class="example__button example__button--after">Стало</button>
+                <img class="example__before" src="img/before-mobile@1x.png" alt="Было" width="320" height="240">
+                <img class="example__after visually-hidden" src="img/after-mobile@1x.png" alt="Стало" width="320" height="240">
+                <div class="example__toggle slider">
+                    <label class="slider__button slider__button--before" for="slide1">Было</label>
+                    <div class="slider__control">
+                        <input class="slider__radio visually-hidden" id="slide1" type="radio" name="slide-review" checked>
+                        <label class="slider__castom-radio" for="slide1"></label>
+                        <input class="slider__radio visually-hidden" id="slide2" type="radio" name="slide-review">
+                        <label class="slider__castom-radio" for="slide2"></label>
+                    </div>
+                    <label class="slider__button slider__button--after" for="slide2">Стало</label>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
         <section class="footer__contacts">
-            <p class="footer__invite">Приглашаем к сотрудничеству дилеров!</p>
-            <p class="footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-            <img src="http://placehold.it/320x362" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+            <div class="footer__communication">
+                <p class="footer__invite">Приглашаем<br>к сотрудничеству дилеров!</p>
+                <p class="footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            </div>
+            <iframe class="footer__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae92e3daff54a453c75d2c797f51e67c69d99d3e6ca3b17dd72dec4cb2fb9abc1&amp;source=constructor" width="320" height="362" style="border:0" ></iframe>
         </section>
-        <a class="footer__logo logo">
-            <img src="http://placehold.it/101x18" alt="Cat Energy">
+        <a class="footer__logo">
+            <img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
         </a>
         <section class="footer__social">
             <ul class="footer__list">
@@ -103,10 +117,7 @@
                 </li>
             </ul>
         </section>
-        <a class="footer__creator" href="https://htmlacademy.ru/intensive/adaptive">
-            HTML Academy
-            <img src="http://placehold.it/27x34" alt="HTML Academy">
-        </a>
+        <a class="footer__creator" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </footer>
 </body>
 

@@ -1,0 +1,39 @@
+.header {
+    position: relative;
+}
+
+.header__logo {
+    display: block;
+    min-height: 53px;
+ 	padding: 12px 20px 0 20px;
+    border-bottom: solid 1px #e6e6e6;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.header__toggle {
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    top: 23px;
+    right: 20px;
+    background-color: transparent;
+    background-image: url(../img/icon-mobile-menu.svg);
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+
+    &--opened {
+        width: 18px;
+        right: 23px;
+        background-image: url(../img/icon-close.svg);
+    }
+}

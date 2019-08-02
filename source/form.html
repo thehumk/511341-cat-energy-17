@@ -3,16 +3,19 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
 </head>
 
 <body>
     <header class="header">
         <a class="header__logo logo" href="index.html">
-            <img src="http://placehold.it/220x47" alt="Cat Energy">
+            <img src="img/logo-mobile.svg" alt="Cat Energy" width="191" height="38">
         </a>
+        <button class="header__toggle header__toggle--opened" type="button">
+            <span class="visually-hidden">Кнопка переключения меню</span>
+        </button>
         <nav class="header__nav main-nav">
-            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Кнопка переключения меню</span></button>
             <ul class="main-nav__list">
                 <li class="main-nav__item">
                     <a class="main-nav__link" href="index.html">Главная</a>
@@ -21,13 +24,13 @@
                     <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
                 </li>
                 <li class="main-nav__item">
-                    <a class="main-nav__link">Подбор программы</a>
+                    <a class="main-nav__link main-nav__link--active"><span class="main-nav__active">Подбор программы</span></a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main class="main-page">
-        <h1 class="main-page__title">Подбор программы</h1>
+    <main class="main-page main-page--form">
+        <h1 class="main-page__title main-page__title--form">Подбор программы</h1>
         <section class="main-page__content">
             <p class="main-page__content-text">Заполните анкету и мы подберем программу питания для вашего кота</p>
             <form class="form" method="post" action="https://echo.htmlacademy.ru">
@@ -47,50 +50,52 @@
                 </fieldset>
                 <fieldset class="form__fieldset form__fieldset--change">
                     <label class="form__label-radio">
-                        <input class="form__input-radio" type="radio" name="change-weight" value="slim" checked>
-                        <span class="form__name">Похудение</span>
+                        <input class="form__input-radio visually-hidden" type="radio" name="change-weight" value="slim" checked>
+                        <span class="form__name form__name--radio">Похудение</span>
                     </label>
                     <label class="form__label-radio">
-                        <input class="form__input-radio" type="radio" name="change-weight" value="mass">
-                        <span class="form__name">Набор массы</span>
+                        <input class="form__input-radio visually-hidden" type="radio" name="change-weight" value="mass">
+                        <span class="form__name form__name--radio">Набор массы</span>
                     </label>
                     <label class="form__label-radio">
-                        <input class="form__input-radio" type="radio" name="change-weight" value="advice">
-                        <span class="form__name">Не знаю (нужен ваш совет)</span>
+                        <input class="form__input-radio visually-hidden" type="radio" name="change-weight" value="advice">
+                        <span class="form__name form__name--radio">Не знаю (нужен ваш совет)</span>
                     </label>
                 </fieldset>
                 <fieldset class="form__fieldset form__fieldset--contacts">
-                    <legend class="form__legend">Контактные данные (владельца кота)</legend>
-                    <label class="form__label-input">
-                        <span class="form__name">E-mail:*</span>
-                        <input class="form__input form__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                    <legend class="form__legend form__legend--contacts">Контактные данные (владельца кота)</legend>
+                    <label class="form__label-input form__label-input--email">
+                        <span class="form__name form__name--contacts">E-mail:*</span>
+                        <input class="form__input form__input--contacts form__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                        <span class="form__icon-email"></span>
                     </label>
-                    <label class="form__label-input">
-                        <span class="form__name">Телефон:*</span>
-                        <input class="form__input form__input--phone" type="tel" name="phone-number" placeholder="8 (960) 900-60-90" required>
+                    <label class="form__label-input form__label-input--phone">
+                        <span class="form__name form__name--contacts">Телефон:*</span>
+                        <input class="form__input form__input--contacts form__input--phone" type="tel" name="phone-number" placeholder="8 (960) 900-60-90" required>
+                        <span class="form__icon-phone"></span>
                     </label>
                 </fieldset>
                 <fieldset class="form__fieldset form__fieldset--comments">
-                    <legend class="form__legend">Комментарий</legend>
+                    <legend class="form__legend form__legend--comments">Комментарий</legend>
                     <textarea class="form__textarea" name="description" placeholder="Расскажите обо всех повадках кота"></textarea>
                 </fieldset>
                 <fieldset class="form__fieldset form__fieldset--additionally">
-                    <legend class="form__legend">Дополнительно</legend>
+                    <legend class="form__legend form__legend--additionally">Дополнительно</legend>
                     <label class="form__label-checkbox">
-                        <input class="form__input-checkbox" type="checkbox" name="sweetener" checked>
-                        <span class="form__name">Сахарозаменитель</span>
+                        <input class="form__input-checkbox visually-hidden" type="checkbox" name="sweetener" checked>
+                        <span class="form__name form__name--additionally">Сахарозаменитель</span>
                     </label>
                     <label class="form__label-checkbox">
-                        <input class="form__input-checkbox" type="checkbox" name="water">
-                        <span class="form__name">Питьевая вода</span>
+                        <input class="form__input-checkbox visually-hidden" type="checkbox" name="water">
+                        <span class="form__name form__name--additionally">Питьевая вода</span>
                     </label>
                     <label class="form__label-checkbox">
-                        <input class="form__input-checkbox" type="checkbox" name="milk">
-                        <span class="form__name">Молоко</span>
+                        <input class="form__input-checkbox visually-hidden" type="checkbox" name="milk">
+                        <span class="form__name form__name--additionally">Молоко</span>
                     </label>
                     <label class="form__label-checkbox">
-                        <input class="form__input-checkbox" type="checkbox" name="vitamin">
-                        <span class="form__name">Витамины</span>
+                        <input class="form__input-checkbox visually-hidden" type="checkbox" name="vitamin">
+                        <span class="form__name form__name--additionally">Витамины</span>
                     </label>
                 </fieldset>
                 <button class="form__submit button" type="submit">Отправить заявку</button>
@@ -100,30 +105,29 @@
     </main>
     <footer class="footer">
         <section class="footer__contacts">
-            <p class="footer__invite">Приглашаем к сотрудничеству дилеров!</p>
-            <p class="footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-            <img src="http://placehold.it/320x362" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+            <div class="footer__communication footer__communication--minor">
+                <p class="footer__invite">Приглашаем<br>к сотрудничеству дилеров!</p>
+                <p class="footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            </div>
+            <iframe class="footer__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae92e3daff54a453c75d2c797f51e67c69d99d3e6ca3b17dd72dec4cb2fb9abc1&amp;source=constructor" width="320" height="362" style="border:0" ></iframe>
         </section>
-        <a class="footer__logo logo" href="index.html">
-            <img src="http://placehold.it/101x18" alt="Cat Energy">
+        <a class="footer__logo" href="index.html">
+            <img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
         </a>
         <section class="footer__social">
             <ul class="footer__list">
                 <li class="footer__item">
-                    <a class="footer__social-link footer__social-link--vk" href="#"></a>
+                    <a class="footer__social-link footer__social-link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
                 </li>
                 <li class="footer__item">
-                    <a class="footer__social-link footer__social-link--inst" href="#"></a>
+                    <a class="footer__social-link footer__social-link--inst" href="#"><span class="visually-hidden">Инстаграм</span></a>
                 </li>
                 <li class="footer__item">
-                    <a class="footer__social-link footer__social-link--fb" href="#"></a>
+                    <a class="footer__social-link footer__social-link--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
                 </li>
             </ul>
         </section>
-        <a class="footer__creator" href="https://htmlacademy.ru/intensive/adaptive">
-            HTML Academy
-            <img src="http://placehold.it/27x34" alt="HTML Academy">
-        </a>
+        <a class="footer__creator" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </footer>
 </body>
 
