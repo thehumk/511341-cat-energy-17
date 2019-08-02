@@ -1,0 +1,52 @@
+.slider {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    padding-left: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider__button {
+    padding: 0;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #111111;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-bottom: dotted 1px #bebebe;
+
+    &:hover,
+    &:focus {
+        border-bottom: solid 1px #989898;
+    }
+
+    &:active {
+        border: none;
+    }
+}
+
+.slider__control {
+    display: flex;
+    width: 84px;
+    height: 14px;
+    padding: 3px 5px;
+    margin-top: 3px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: solid 1px #cdcdcd;
+    border-radius: 4px;
+}
+
+.slider__castom-radio {
+    display: block;
+    margin: 0;
+    width: 35px;
+    height: 6px;
+    border-radius: 2px;
+}
+
+.slider__radio:checked + .slider__castom-radio {
+    background-color: #68b738;
+}
