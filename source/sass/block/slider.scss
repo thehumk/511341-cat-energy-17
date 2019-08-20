@@ -1,52 +1,195 @@
 .slider {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    padding-left: 5px;
-    margin-left: auto;
-    margin-right: auto;
+	overflow: hidden;
+
+	@media (min-width: $tablet-width) {
+		padding-bottom: 50px;
+	}
+}
+
+.slider__wrapper {
+	display: flex;
+	width: 640px;
+	margin-bottom: 27px;
+	transform: translateX(0%);
+	transition-duration: 0.5s;
+
+	&--after {
+		transform: translateX(-50%);
+		transition-duration: 0.5s;
+	}
+
+	@media (min-width: $tablet-width) {
+		width: 690px;
+		min-height: 522px;
+		margin-left: 16px;
+		margin-bottom: 0;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 610px;
+		padding-left: 142px;
+	}
+}
+
+.slider__before-wrapper {
+	@media (min-width: $tablet-width) {
+		position: relative;
+		width: 49%;
+		overflow: hidden;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 53.2%;
+	}
+}
+
+.slider__after-wrapper {
+	@media (min-width: $tablet-width) {
+		position: relative;
+		width: 51%;
+		overflow: hidden;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 46.8%;
+	}
+}
+
+.slider__image {
+	width: 320px;
+	height: 240px;
+
+	@media (min-width: $tablet-width) {
+		position: absolute;
+		width: 690px;
+		height: 517px;
+		top: 0;
+
+		&--before {
+			left: 0;
+		}
+
+		&--after {
+			direction: rtl;
+			right: 0;
+		}
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 610px;
+	}
+}
+
+.slider__toggle {
+	display: flex;
+	justify-content: space-between;
+	width: 200px;
+	padding-left: 5px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (min-width: $tablet-width) {
+		width: 570px;
+		padding-top: 8px;
+		padding-right: 6px;
+	}
+
+	@media (min-width: $desktop-width) {
+		margin-right: 0;
+		padding: 30px 0 0 0;
+	}
 }
 
 .slider__button {
-    padding: 0;
-    font-family: Oswald, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    color: #111111;
-    text-transform: uppercase;
-    background-color: transparent;
-    border-bottom: dotted 1px #bebebe;
+	padding: 0;
+	font-family: "Oswald", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #111111;
+	text-transform: uppercase;
+	background-color: transparent;
+	border-bottom: dotted 1px #bebebe;
+	cursor: pointer;
 
-    &:hover,
-    &:focus {
-        border-bottom: solid 1px #989898;
-    }
+	&:hover,
+	&:focus {
+		border-bottom: solid 1px #989898;
+	}
 
-    &:active {
-        border: none;
-    }
+	&:active {
+		border: none;
+	}
+
+	@media (min-width: $tablet-width) {
+		font-size: 20px;
+		line-height: 30px;
+	}
 }
 
-.slider__control {
-    display: flex;
-    width: 84px;
-    height: 14px;
-    padding: 3px 5px;
-    margin-top: 3px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    border: solid 1px #cdcdcd;
-    border-radius: 4px;
+.slider__range {
+	@media (max-width: $tablet-width - 1) {
+		display: none;
+	}
+
+	position: relative;
+	width: 428px;
+	height: 6px;
+	margin-top: 13px;
+	margin-left: 5px;
+	background-color: #dcdcdc;
+	border-radius: 2px;
+	cursor: pointer;
 }
 
-.slider__castom-radio {
-    display: block;
-    margin: 0;
-    width: 35px;
-    height: 6px;
-    border-radius: 2px;
+.slider__range-toggle {
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	top: -14px;
+	left: 50%;
+	margin-left: -17px;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #68b738;
+	border: solid 13px #ffffff;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+	outline: none;
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 0 0 1px #cdcdcd, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+	}
+
+	&:active {
+		box-shadow: 0 0 0 2px #68b738, 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+	}
 }
 
-.slider__radio:checked + .slider__castom-radio {
-    background-color: #68b738;
+.slider__radio-control {
+	display: flex;
+	width: 84px;
+	height: 14px;
+	padding: 3px 5px;
+	margin-top: 3px;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	border: solid 1px #cdcdcd;
+	border-radius: 4px;
+
+	@media (min-width: $tablet-width) {
+		display: none;
+	}
+}
+
+.slider__custom-radio {
+	display: block;
+	margin: 0;
+	width: 35px;
+	height: 6px;
+	border-radius: 2px;
+}
+
+.slider__radio:checked + .slider__custom-radio {
+	background-color: #68b738;
 }

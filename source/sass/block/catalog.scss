@@ -1,5 +1,10 @@
 .catalog__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	@media (min-width: $tablet-width) {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }

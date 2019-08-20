@@ -1,39 +1,89 @@
 .header {
-    position: relative;
+	position: relative;
+
+	@media (min-width: $tablet-width) {
+		display: flex;
+		justify-content: space-between;
+		padding: 24px 30px 0 30px;
+	}
+
+	@media (min-width: $desktop-width) {
+		position: absolute;
+		justify-content: flex-start;
+		width: $desktop-width;
+		top: 29px;
+		left: 50%;
+		margin-left: -650px;
+		padding: 24px 40px 0 40px;
+		box-sizing: border-box;
+		z-index: 5;
+	}
+}
+
+.header__link-logo {
+	display: block;
+	min-height: 53px;
+	padding: 12px 20px 0 20px;
+	border-bottom: solid 1px #e6e6e6;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		opacity: 0.8;
+	}
+
+	&:active {
+		opacity: 0.6;
+	}
+
+	@media (min-width: $tablet-width) {
+		display: inline-block;
+		padding: 0;
+		border: none;
+	}
 }
 
 .header__logo {
-    display: block;
-    min-height: 53px;
- 	padding: 12px 20px 0 20px;
-    border-bottom: solid 1px #e6e6e6;
-    cursor: pointer;
+	width: 191px;
+	height: 38px;
 
-    &:hover,
-    &:focus {
-        opacity: 0.8;
-    }
+	@media (min-width: $tablet-width) {
+		width: 173px;
+		height: 58px;
+	}
 
-    &:active {
-        opacity: 0.6;
-    }
+	@media (min-width: $desktop-width) {
+		width: 202px;
+		height: 60px;
+	}
 }
 
 .header__toggle {
-    position: absolute;
-    width: 24px;
-    height: 18px;
-    top: 23px;
-    right: 20px;
-    background-color: transparent;
-    background-image: url(../img/icon-mobile-menu.svg);
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
+	position: absolute;
+	width: 24px;
+	height: 18px;
+	top: 23px;
+	right: 20px;
+	background-color: transparent;
+	background-image: url(../img/icon-mobile-menu.svg);
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
 
-    &--opened {
-        width: 18px;
-        right: 23px;
-        background-image: url(../img/icon-close.svg);
-    }
+	&--opened {
+		width: 18px;
+		right: 23px;
+		background-image: url(../img/icon-close.svg);
+	}
+
+	@media (min-width: $tablet-width) {
+		display: none;
+	}
+}
+
+.header__nav {
+	@media (min-width: $desktop-width) {
+		margin-left: auto;
+		margin-top: 2px;
+	}
 }
