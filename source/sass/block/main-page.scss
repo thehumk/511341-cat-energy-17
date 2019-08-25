@@ -1,48 +1,83 @@
 .main-page {
-	margin-bottom: 35px;
+  margin-bottom: 35px;
 
-	&--form {
-		margin-bottom: 32px;
-	}
+  &--form {
+    margin-bottom: 32px;
+  }
 
-	@media (min-width: $tablet-width) {
-		margin-bottom: 76px;
-	}
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+
+    &--form {
+      margin-bottom: 72px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--form {
+      margin-bottom: 82px;
+    }
+  }
 }
 
 .main-page__title {
-	margin: 0;
-	padding: 15px 20px 28px 20px;
-	font-size: 36px;
-	line-height: 60px;
-	color: #111111;
-	font-weight: 400;
-	border-bottom: solid 1px #ededed;
+  margin: 0;
+  padding: 15px 20px 28px 20px;
+  font-size: 36px;
+  line-height: 60px;
+  color: #111111;
+  font-weight: 400;
+  border-bottom: solid 1px #ededed;
 
-	&--form {
-		padding-bottom: 11px;
-		border: none;
-	}
+  &--form {
+    padding-bottom: 11px;
+    border: none;
+  }
 
-	@media (min-width: $tablet-width) {
-		padding: 53px 30px 20px 30px;
-		margin-bottom: 145px;
-		font-size: 60px;
-		line-height: 60px;
-		border: none;
-	}
+  @media (min-width: $tablet-width) {
+    padding: 53px 30px 20px 30px;
+    margin-bottom: 145px;
+    font-size: 60px;
+    line-height: 60px;
+    border: none;
 
-	@media (min-width: $desktop-width) {
-		padding: 188px 40px 20px 40px;
-	}
+    &--form {
+      margin-bottom: 35px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    margin: 0 auto 145px auto;
+    padding: 188px 40px 20px 40px;
+    box-sizing: border-box;
+
+    &--form {
+      margin-bottom: 35px;
+    }
+  }
 }
 
 .main-page__content-text {
-	width: 230px;
-	margin-bottom: 39px;
-	padding: 0 70px 0 20px;
-	font-size: 14px;
-	line-height: 18px;
-	color: #111111;
-	text-transform: uppercase;
+  width: 230px;
+  margin-bottom: 39px;
+  padding: 0 70px 0 20px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #111111;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 380px;
+    margin-bottom: 66px;
+    padding-left: 70px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 880px 0 40px;
+    margin: 0 auto 66px auto;
+    box-sizing: content-box;
+  }
 }

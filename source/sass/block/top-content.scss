@@ -4,7 +4,7 @@
   margin-bottom: 22px;
   padding: 27px 20px 0 20px;
   box-sizing: border-box;
-  background-image: url(../img/index-background-mobile@1x.jpg);
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 
@@ -30,13 +30,31 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 0;
+    background-image: linear-gradient(to right, #ffffff 50%, #65a93c 50%);
+    z-index: -2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 696px;
+      top: 0;
+      right: -70px;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+}
+
+.top-content__container {
+  @media (min-width: $desktop-width) {
+    position: relative;
     display: flex;
     width: $desktop-width;
     margin: 0 auto 80px auto;
     padding: 143px 40px 54px 40px;
-    background-image: url(../img/index-background-desktop@1x.jpg);
-    background-position-x: 650px;
-    background-repeat: no-repeat;
   }
 }
 
@@ -132,7 +150,7 @@
 
   &--all-item {
     color: #444444;
-    background-color: #f2f2f2
+    background-color: #f2f2f2;
   }
 
   &--all-item:hover,
