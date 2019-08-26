@@ -1,26 +1,52 @@
+$tablet-width: 768px;
+$desktop-width: 1300px;
+
 body {
-	min-width: 320px;
-	margin: 0 auto;
-	font-family: Oswald, Arial, sans-serif;
-    background-color: #ffffff;
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: "Oswald", "Arial", sans-serif;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: $desktop-width;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
-    width: 320px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.desktop-container {
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 0 40px;
     margin: 0 auto;
+    box-sizing: border-box;
+  }
 }
