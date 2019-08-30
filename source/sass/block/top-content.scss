@@ -8,6 +8,11 @@
   background-position: top center;
   background-repeat: no-repeat;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -40,10 +45,16 @@
       width: 720px;
       height: 696px;
       top: 0;
-      right: -70px;
+      right: 0;
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
+      background-position-x: 70px;
       z-index: -1;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 }
@@ -55,6 +66,7 @@
     width: $desktop-width;
     margin: 0 auto 80px auto;
     padding: 143px 40px 54px 40px;
+    box-sizing: border-box;
   }
 }
 
