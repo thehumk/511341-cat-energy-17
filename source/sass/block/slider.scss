@@ -4,6 +4,10 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 142px;
+  }
 }
 
 .slider__wrapper {
@@ -19,6 +23,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    position: relative;
     width: 690px;
     min-height: 522px;
     margin-left: 16px;
@@ -27,14 +32,16 @@
 
   @media (min-width: $desktop-width) {
     width: 610px;
-    padding-left: 142px;
   }
 }
 
 .slider__before-wrapper {
   @media (min-width: $tablet-width) {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 49%;
+    height: 517px;
     overflow: hidden;
   }
 
@@ -45,8 +52,11 @@
 
 .slider__after-wrapper {
   @media (min-width: $tablet-width) {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 51%;
+    height: 517px;
     overflow: hidden;
   }
 

@@ -100,5 +100,7 @@
 }
 
 .main-nav__link--index .main-nav__active::after {
-  background-color: #ffffff;
+  @media (min-width: $desktop-width) {
+    background-color: #ffffff;
+  }
 }

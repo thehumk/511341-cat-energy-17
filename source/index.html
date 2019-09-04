@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -17,7 +21,7 @@
         <img class="header__logo" src="img/logo-mobile.svg" alt="Cat Energy" width="191" height="38">
       </picture>
     </a>
-    <button class="header__toggle header__toggle--opened" type="button">
+    <button class="header__toggle header__toggle--no-js" type="button">
       <span class="visually-hidden">Кнопка переключения меню</span>
     </button>
     <nav class="header__nav main-nav">
@@ -159,63 +163,8 @@
       <a class="footer__creator" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </footer>
-
-  <script>
-    var browserWidth = document.body.clientWidth;
-    var tabletWidth = 768;
-
-    var slide = document.querySelector('.slider__wrapper');
-    var btnBefore = document.querySelector('.slider__button--before');
-    var btnAfter = document.querySelector('.slider__button--after');
-    var radioBefore = document.querySelector('.slider__custom-radio--before');
-    var radioAfter = document.querySelector('.slider__custom-radio--after');
-
-    // slider-mobile
-
-    if (browserWidth < tabletWidth) {
-      btnBefore.addEventListener('click', function() {
-        if (slide.classList.contains('slider__wrapper--after')) {
-          slide.classList.remove('slider__wrapper--after');
-        }
-      });
-
-      btnAfter.addEventListener('click', function() {
-        if (!slide.classList.contains('slider__wrapper--after')) {
-          slide.classList.add('slider__wrapper--after');
-        }
-      });
-
-      radioBefore.addEventListener('click', function() {
-        if (slide.classList.contains('slider__wrapper--after')) {
-          slide.classList.remove('slider__wrapper--after');
-        }
-      });
-
-      radioAfter.addEventListener('click', function() {
-        if (!slide.classList.contains('slider__wrapper--after')) {
-          slide.classList.add('slider__wrapper--after');
-        }
-      });
-    }
-
-    // slider-tablet
-
-    if (browserWidth >= tabletWidth) {
-      var imgBefore = document.querySelector('.slider__before-wrapper');
-      var imgAfter = document.querySelector('.slider__after-wrapper');
-
-      btnBefore.addEventListener('click', function() {
-        imgBefore.style.width = '100%';
-        imgAfter.style.width = '0%';
-      });
-
-      btnAfter.addEventListener('click', function() {
-        imgBefore.style.width = '0%';
-        imgAfter.style.width = '100%';
-      });
-    }
-
-  </script>
+  <script src="js/main.js"></script>
+  <script src="js/picturefill.js"></script>
 </body>
 
 </html>
