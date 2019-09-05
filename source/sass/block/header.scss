@@ -76,6 +76,10 @@
     background-image: url("../img/icon-close.svg");
   }
 
+  &--no-js {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
