@@ -6,8 +6,6 @@ var tabletWidth = 768;
 var slide = document.querySelector('.slider__wrapper');
 var btnBefore = document.querySelector('.slider__button--before');
 var btnAfter = document.querySelector('.slider__button--after');
-var radioBefore = document.querySelector('.slider__custom-radio--before');
-var radioAfter = document.querySelector('.slider__custom-radio--after');
 
 // header-nav toggle menu
 
@@ -45,19 +43,6 @@ if (browserWidth < tabletWidth) {
       slide.classList.add('slider__wrapper--after');
     }
   });
-
-  radioBefore.addEventListener('click', function() {
-    if (slide.classList.contains('slider__wrapper--after')) {
-      slide.classList.remove('slider__wrapper--after');
-    }
-  });
-
-  radioAfter.addEventListener('click', function() {
-    if (!slide.classList.contains('slider__wrapper--after')) {
-      slide.classList.add('slider__wrapper--after');
-    }
-  });
-}
 
 // slider-tablet
 
