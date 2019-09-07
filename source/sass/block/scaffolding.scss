@@ -42,6 +42,10 @@ input[type="radio"].visually-hidden {
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     display: flex;
   }
+
+  &--space-between {
+    justify-content: space-between;
+  }
 }
 
 .desktop-container {
@@ -50,5 +54,9 @@ input[type="radio"].visually-hidden {
     padding: 0 40px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    &--flex {
+      display: flex;
+    }
   }
 }

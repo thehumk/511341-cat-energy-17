@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
-  <link rel="preload" href="fonts/oswaldregular.woff" as="font">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -83,11 +83,11 @@
       </ul>
     </section>
     <section class="example">
-      <div class="desktop-container">
+      <div class="desktop-container desktop-container--flex">
         <div class="example__container">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <div class="flex-container">
+          <div class="flex-container flex-container--space-between">
             <div class="example__result">
               <p class="example__value">5 кг<span class="example__name example__name--slim">снижение веса</span></p>
               <p class="example__value">60 дней<span class="example__name example__name--time">затрачено времени</span></p>
@@ -116,13 +116,7 @@
             <label class="slider__button slider__button--before" for="slide1">Было</label>
             <div class="slider__control">
               <div class="slider__range">
-                <button class="slider__range-toggle" type="button"></button>
-              </div>
-              <div class="slider__radio-control">
-                <input class="slider__radio slider-radio--before visually-hidden" id="slide1" type="radio" name="slide-review" checked>
-                <label class="slider__custom-radio slider__custom-radio--before" for="slide1"></label>
-                <input class="slider__radio slider-radio--after visually-hidden" id="slide2" type="radio" name="slide-review">
-                <label class="slider__custom-radio slider__custom-radio--after" for="slide2"></label>
+                <button class="slider__range-toggle" type="button"><span class="visually-hidden">Ползунок переключения слайдов</span></button>
               </div>
             </div>
             <label class="slider__button slider__button--after" for="slide2">Стало</label>
