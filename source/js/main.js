@@ -43,6 +43,7 @@ if (browserWidth < tabletWidth) {
       slide.classList.add('slider__wrapper--after');
     }
   });
+}
 
 // slider-tablet
 
